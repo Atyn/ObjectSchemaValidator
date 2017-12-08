@@ -24,8 +24,13 @@ const schema = {
 }
 
 const options = {
-  ignoreCase: false,
-  noUndefinedKeys: true,
+  keys: {
+    ignoreCase: false,
+    onlyDefined: false,
+  },
+  values: {
+    ignoreCase: false,
+  },
   throwError: false
 }
 
