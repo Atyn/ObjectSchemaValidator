@@ -14,7 +14,7 @@ const schema = {
     type: String,
     required: true,
     values: [
-      'valueA', valueB'
+      'valueA', 'valueB'
     ]
   },
   anotherProp: Boolean,
