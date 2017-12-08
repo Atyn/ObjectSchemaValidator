@@ -1,6 +1,13 @@
 # ObjectSchemaValidator
 Validate simple javascript objects one or multiple levels
 
+## options
+### keys
+  ignoreCase: Boolean,
+  onlyDefined: Boolean,
+### values
+  ignoreCase: Boolean,
+
 ```javascript
 import ObjectSchemaValidator from 'ObjectSchemaValidator'
 
@@ -10,7 +17,7 @@ const obj = {
 }
 
 const schema = {
-  Str: { 
+  Str: {
     type: String,
     required: true,
     values: [
@@ -31,21 +38,20 @@ const options = {
   values: {
     ignoreCase: false,
   },
-  throwError: false
+  failOnError: false
 }
 
 const validator = new ObjectSchemaValidator(schema, options)
 
-/*
+const results = validator.validate(obj)
+/* Results:
 errors: {
   "Str": "is not defined and required",
   "str": "is not a schema property",
   "b": "c is not a valid value"
 },
 warnings: {
-  "anotherProp": 
+  "anotherProp":
 }
 */
-validator.validate(obj)
-
 ```
