@@ -1,5 +1,5 @@
 {
-  "name": "object-schema-validator",
+  "name": "object-schema-verifier",
   "version": "0.0.2",
   "description": "Validate simple javascript objects one or multiple levels",
   "main": "index.js",
