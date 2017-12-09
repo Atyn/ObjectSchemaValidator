@@ -1,10 +1,12 @@
 {
-  "name": "objectschemavalidator",
+  "name": "object-schema-validator",
   "version": "0.0.1",
   "description": "Validate simple javascript objects one or multiple levels",
   "main": "index.js",
   "scripts": {
-    "test": "babel-node ./test/index.js"
+    "test": "babel-node ./test/index.js",
+    "build": "echo 'build not yet defined'",
+    "publish-patch": "npm install && npm update && npm run test && npm run build && npm version patch && npm publish && git push"
   },
   "repository": {
     "type": "git",
